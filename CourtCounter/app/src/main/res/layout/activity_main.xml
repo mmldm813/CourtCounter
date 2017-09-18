@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/baseball_field"
+        android:scaleType="fitXY"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="450dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.example.android.courtcounter.MainActivity">
+
+            <TextView
+                android:id="@+id/RunsTeamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Team A"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/one_point_runs_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="plus1RunA"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="+ 1 Run"
+                android:layout_gravity="center" />
+            <Button
+                android:id="@+id/one_point_outs_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="plus1OutA"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="+1 Out"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="450dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.example.android.courtcounter.MainActivity">
+
+            <TextView
+                android:id="@+id/RunsTeamB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Team B"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="0"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/one_point_runs_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="plus1RunB"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="+1 Run" />
+            <Button
+                android:id="@+id/one_point_outs_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="plus1OutB"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="+1 Out"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetScore"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>
